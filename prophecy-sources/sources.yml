@@ -11,14 +11,6 @@ sources:
   database: "main"
   schema: "default"
   tables: []
-- name: "Q.asd"
-  database: "Q"
-  schema: "asd"
-  tables:
-  - name: "asda"
-    description: ""
-    columns: []
-    type: "table"
 - name: "sony.orch_test"
   description: ""
   database: "sony"

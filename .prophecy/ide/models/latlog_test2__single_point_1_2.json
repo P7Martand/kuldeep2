@@ -1,7 +1,7 @@
 {
-  "id" : "model_latlog_test2_single_point_1_2",
+  "id" : "latlog_test2__single_point_1_2",
   "metainfo" : {
-    "label" : "model_latlog_test2_single_point_1_2",
+    "label" : "latlog_test2__single_point_1_2",
     "autoLayout" : true,
     "staleState" : "none",
     "sourceSuggestions" : {
@@ -9,22 +9,20 @@
     },
     "graphConfig" : {
       "entityConfig" : {
-        "alias" : "\"prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2\"",
-        "materialized" : "table",
-        "database" : "\"sony\"",
-        "schema" : "\"orch_test\"",
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
         "type" : "ModelConfig"
       }
     },
     "version" : 3
   },
   "processes" : {
-    "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2" : {
-      "id" : "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2",
+    "single_point_1_2_g84Jyeiu5_1ym2aH5fzwe$$uqKm6RJLk-IuKyyBT9K9h" : {
+      "id" : "single_point_1_2_g84Jyeiu5_1ym2aH5fzwe$$uqKm6RJLk-IuKyyBT9K9h",
       "component" : "TargetModel",
       "metadata" : {
-        "label" : "single_point_1_2",
-        "phase" : 0
+        "label" : "single_point_1_2"
       },
       "properties" : {
         "customQueryDisabled" : true,
@@ -39,12 +37,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "input_port_5_1",
-          "slug" : "input_port_5_1"
+          "id" : "input_port_5",
+          "slug" : "input_port_5"
         } ],
         "outputs" : [ {
-          "id" : "output_port_5_1",
-          "slug" : "output_port_5_1"
+          "id" : "output_port_5",
+          "slug" : "output_port_5"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -157,26 +155,38 @@
         "autoUpdateOnRun" : false
       }
     },
-    "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1" : {
-      "id" : "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1",
-      "component" : "Source",
+    "create_point_1_1_oJ-cZb7Jy_qe2QmHnrupV$$EiLZABahfnDcxUBxJKl8P" : {
+      "id" : "create_point_1_1_oJ-cZb7Jy_qe2QmHnrupV$$EiLZABahfnDcxUBxJKl8P",
+      "component" : "SQLStatement",
       "metadata" : {
-        "label" : "create_point_1_1",
-        "phase" : 0
+        "label" : "create_point_1_1"
       },
       "properties" : {
-        "table" : {
-          "name" : "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1",
-          "sourceType" : "Source",
-          "sourceName" : "prophecy_tmp_source__latlog_test2",
-          "alias" : ""
-        }
+        "fileTabs" : [ {
+          "path" : "output_port_1",
+          "id" : "output_port_1",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ ref('latlog_test2__create_point_1_1') }}\n\n"
+        } ]
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
         "outputs" : [ {
-          "id" : "output_port_1_1",
-          "slug" : "output_port_1_1"
+          "id" : "output_port_1",
+          "slug" : "output_port_1",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            }
+          }
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -184,11 +194,11 @@
     }
   },
   "connections" : [ {
-    "id" : "conn_Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm_prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2",
+    "id" : "conn_Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm_g84Jyeiu5_1ym2aH5fzwe$$uqKm6RJLk-IuKyyBT9K9h_single_point_1_2_g84Jyeiu5_1ym2aH5fzwe$$uqKm6RJLk-IuKyyBT9K9h",
     "source" : "Hd8p3ZHl_yQZz0HeOy6GH$$GNXfqUcQt6PLYOKdIaOJm",
     "sourcePort" : "g84Jyeiu5_1ym2aH5fzwe$$uqKm6RJLk-IuKyyBT9K9h",
-    "target" : "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_2",
-    "targetPort" : "input_port_5_1"
+    "target" : "single_point_1_2_g84Jyeiu5_1ym2aH5fzwe$$uqKm6RJLk-IuKyyBT9K9h",
+    "targetPort" : "input_port_5"
   }, {
     "id" : "DnF6v58a8CfA94OMTPQLn",
     "source" : "_GNadeSeKe5-myKg3xvxI$$U2oMMBDzPbmqCcUuGec4P",
@@ -197,8 +207,8 @@
     "targetPort" : "PMyoKsAc0fuixFavtNh_T$$qf8LUr5ysCv7fxz9ASQWf"
   }, {
     "id" : "R9VLLsr3aOgSqOAMT9qVd",
-    "source" : "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1",
-    "sourcePort" : "output_port_1_1",
+    "source" : "create_point_1_1_oJ-cZb7Jy_qe2QmHnrupV$$EiLZABahfnDcxUBxJKl8P",
+    "sourcePort" : "output_port_1",
     "target" : "_GNadeSeKe5-myKg3xvxI$$U2oMMBDzPbmqCcUuGec4P",
     "targetPort" : "els2qhViRu-0dYgy0nVfn$$1gfXtu6tHCkNcjnIfMfu4"
   } ],

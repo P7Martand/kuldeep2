@@ -61,21 +61,20 @@ with DAG(Schedule = Schedule):
         ), 
         filePath = "/datasets/orchestration_datasets/csv/arun/dataLatLongPoint.csv"
     )
-    model_latlog_test2_single_point_1_2 = Task(
-        task_id = "model_latlog_test2_single_point_1_2", 
+    latlog_test2__single_point_1_2 = Task(
+        task_id = "latlog_test2__single_point_1_2", 
         component = "Model", 
-        modelName = "model_latlog_test2_single_point_1_2"
+        modelName = "latlog_test2__single_point_1_2"
     )
-    create_point_gem_seed_2 = Task(
-        task_id = "create_point_gem_seed_2", 
-        component = "Dataset", 
-        writeOptions = {"writeMode" : "overwrite"}, 
-        table = {"name" : "create_point_gem_seed", "sourceType" : "Table", "sourceName" : "sony.orch_test", "alias" : ""}
-    )
-    model_latlog_test2_single_point_1 = Task(
-        task_id = "model_latlog_test2_single_point_1", 
+    latlog_test2__create_point_gem_seed_2 = Task(
+        task_id = "latlog_test2__create_point_gem_seed_2", 
         component = "Model", 
-        modelName = "model_latlog_test2_single_point_1"
+        modelName = "latlog_test2__create_point_gem_seed_2"
+    )
+    latlog_test2__single_point_1 = Task(
+        task_id = "latlog_test2__single_point_1", 
+        component = "Model", 
+        modelName = "latlog_test2__single_point_1"
     )
     seedtest2 = Task(
         task_id = "seedtest2", 
@@ -83,16 +82,16 @@ with DAG(Schedule = Schedule):
         table = {"name" : "seedtest2", "sourceType" : "Seed"}, 
         writeOptions = {"writeMode" : "overwrite"}
     )
-    model_latlog_test2_single_point_1_1 = Task(
-        task_id = "model_latlog_test2_single_point_1_1", 
+    latlog_test2__single_point_1_1 = Task(
+        task_id = "latlog_test2__single_point_1_1", 
         component = "Model", 
-        modelName = "model_latlog_test2_single_point_1_1"
+        modelName = "latlog_test2__single_point_1_1"
     )
-    create_point_gem_seed_1 = Task(
-        task_id = "create_point_gem_seed_1", 
+    dataLatLong_csv_1 = Task(
+        task_id = "dataLatLong_csv_1", 
         component = "Dataset", 
-        writeOptions = {"writeMode" : "overwrite"}, 
-        table = {"name" : "create_point_gem_seed", "sourceType" : "Table", "sourceName" : "sony.orch_test", "alias" : ""}
+        label = "dataLatLong_csv_1", 
+        table = {"name" : "{{ prophecy_tmp_source('latlog_test2', 'dataLatLong_csv_1') }}", "sourceType" : "UnreferencedSource"}
     )
     dataLatLong_csv_1 = SourceTask(
         task_id = "dataLatLong_csv_1", 
@@ -117,16 +116,6 @@ with DAG(Schedule = Schedule):
         component = "Dataset", 
         table = {"name" : "test_seed", "sourceType" : "Seed"}, 
         writeOptions = {"writeMode" : "overwrite"}
-    )
-    dataLatLong_csv_1 = Task(
-        task_id = "dataLatLong_csv_1", 
-        component = "Dataset", 
-        table = {
-          "name": "prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1", 
-          "sourceType": "Source", 
-          "sourceName": "prophecy_tmp_source__latlog_test2", 
-          "alias": ""
-        }
     )
     ashtest = Task(
         task_id = "ashtest", 
@@ -170,10 +159,10 @@ with DAG(Schedule = Schedule):
         }, 
         isNew = False
     )
-    model_latlog_test2_single_point_1_3 = Task(
-        task_id = "model_latlog_test2_single_point_1_3", 
+    latlog_test2__single_point_1_3 = Task(
+        task_id = "latlog_test2__single_point_1_3", 
         component = "Model", 
-        modelName = "model_latlog_test2_single_point_1_3"
+        modelName = "latlog_test2__single_point_1_3"
     )
     test_new_seed_with_date = Task(
         task_id = "test_new_seed_with_date", 
@@ -181,25 +170,14 @@ with DAG(Schedule = Schedule):
         writeOptions = {"writeMode" : "overwrite"}, 
         table = {"name" : "test_new_seed_with_date", "sourceType" : "Seed", "alias" : ""}
     )
-    model_latlog_test2_create_point_1_1 = Task(
-        task_id = "model_latlog_test2_create_point_1_1", 
+    latlog_test2__create_point_1_1 = Task(
+        task_id = "latlog_test2__create_point_1_1", 
         component = "Model", 
-        modelName = "model_latlog_test2_create_point_1_1"
+        modelName = "latlog_test2__create_point_1_1"
     )
-    create_point_gem_seed_3 = Task(
-        task_id = "create_point_gem_seed_3", 
-        component = "Dataset", 
-        writeOptions = {"writeMode" : "overwrite"}, 
-        table = {"name" : "create_point_gem_seed", "sourceType" : "Table", "sourceName" : "sony.orch_test", "alias" : ""}
-    )
-    test_new_seed_with_date.out >> model_latlog_test2_single_point_1_3.in_0
+    test_new_seed_with_date.out >> latlog_test2__single_point_1_3.in_0
     dataLatLongPoint_csv_1.out0 >> seedtest2.in0
-    test_seed.out >> model_latlog_test2_single_point_1_1.in_0
-    (
-        model_latlog_test2_create_point_1_1.out_0
-        >> [city_distance_analysis_csv.in0, model_latlog_test2_single_point_1_2.in_0]
-    )
-    create_point_gem_seed_1.out >> create_point_gem_seed_2.in0
-    dataLatLong_csv_1.out0 >> dataLatLong_csv_1.input_port_0_1
-    create_point_gem_seed_3.out >> model_latlog_test2_single_point_1.in_0
-    dataLatLong_csv_1.output_port_0_1 >> model_latlog_test2_create_point_1_1.in_0
+    test_seed.out >> latlog_test2__single_point_1_1.in_0
+    dataLatLong_csv_1.output_port_0 >> latlog_test2__create_point_1_1.in_0
+    latlog_test2__create_point_1_1.out_0 >> [city_distance_analysis_csv.in0, latlog_test2__single_point_1_2.in_0]
+    dataLatLong_csv_1.out0 >> dataLatLong_csv_1.input_port_0

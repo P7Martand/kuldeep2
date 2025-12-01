@@ -1,0 +1,92 @@
+{
+  "id" : "latlog_test2__create_point_gem_seed_2",
+  "metainfo" : {
+    "label" : "latlog_test2__create_point_gem_seed_2",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"create_point_gem_seed\"",
+        "materialized" : "table",
+        "database" : "\"sony\"",
+        "schema" : "\"orch_test\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "XzI5fnYuQyajZweAtoXth" : {
+      "id" : "XzI5fnYuQyajZweAtoXth",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "create_point_gem_seed_1",
+        "x" : 440,
+        "y" : 820,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "create_point_gem_seed",
+          "sourceType" : "Table",
+          "sourceName" : "sony.orch_test",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "cY5Q7RNtsm4fdNPV4x8eU",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "zHBqr0lwtDTJ4kze2RlwP" : {
+      "id" : "zHBqr0lwtDTJ4kze2RlwP",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "create_point_gem_seed_2",
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM create_point_gem_seed_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1Mb3qHkgshYniGibdhcyi",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "bXcQSDauyWrF1DgtOBoDE",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "yKEWmbDu_iMUa9L8yqr_c$$hakJYu4aIbE8XTiJMHSw3",
+    "source" : "XzI5fnYuQyajZweAtoXth",
+    "sourcePort" : "cY5Q7RNtsm4fdNPV4x8eU",
+    "target" : "zHBqr0lwtDTJ4kze2RlwP",
+    "targetPort" : "1Mb3qHkgshYniGibdhcyi"
+  } ],
+  "component" : "Model"
+}

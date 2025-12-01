@@ -1,9 +1,8 @@
 {{
   config({    
-    "materialized": "table",
-    "alias": "prophecy_tmp__mbrjvs6c__latlong3__single_point_1",
-    "database": "sony",
-    "schema": "orch_test"
+    "materialized": "ephemeral",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
   })
 }}
 

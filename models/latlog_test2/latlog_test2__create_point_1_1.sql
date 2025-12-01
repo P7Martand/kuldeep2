@@ -1,17 +1,16 @@
 {{
   config({    
-    "materialized": "table",
-    "alias": "prophecy_tmp__mbz0tvui__latlog_test2__create_point_1_1",
-    "database": "sony",
-    "schema": "orch_test"
+    "materialized": "ephemeral",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
   })
 }}
 
 WITH dataLatLong_csv_1 AS (
 
-  SELECT * 
+  SELECT *
   
-  FROM {{ source('prophecy_tmp_source__latlog_test2', 'prophecy_tmp__mbz0tvui__latlog_test2__dataLatLong_csv_1') }}
+  FROM {{ prophecy_tmp_source('latlog_test2', 'dataLatLong_csv_1') }}
 
 ),
 

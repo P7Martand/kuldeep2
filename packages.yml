@@ -1,8 +1,8 @@
 ---
 packages:
-- revision: "sql_table_lib/2"
-  git: "http://gitserver:3000/3hPfgmqG_team_67/foYwSqoh_project_27575.git"
-  subdirectory: ""
 - revision: "1.0.4.dev3"
   git: "https://github.com/prophecy-io/prophecy-basics"
+  subdirectory: ""
+- revision: "0.0.13"
+  git: "https://github.com/prophecy-io/databricks-sql-basics"
   subdirectory: ""

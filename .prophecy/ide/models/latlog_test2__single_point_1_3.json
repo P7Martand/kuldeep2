@@ -1,7 +1,7 @@
 {
-  "id" : "model_latlog_test2_single_point_1_3",
+  "id" : "latlog_test2__single_point_1_3",
   "metainfo" : {
-    "label" : "model_latlog_test2_single_point_1_3",
+    "label" : "latlog_test2__single_point_1_3",
     "autoLayout" : true,
     "staleState" : "none",
     "sourceSuggestions" : {
@@ -9,10 +9,9 @@
     },
     "graphConfig" : {
       "entityConfig" : {
-        "alias" : "\"prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3\"",
-        "materialized" : "table",
-        "database" : "\"sony\"",
-        "schema" : "\"orch_test\"",
+        "materialized" : "ephemeral",
+        "database" : "\"qa_team\"",
+        "schema" : "\"qa_orchestration\"",
         "type" : "ModelConfig"
       }
     },
@@ -70,6 +69,36 @@
         "outputs" : [ {
           "id" : "hMaafCZqHuqvH839nJLeh$$TYUkCZP0-YDlCwZnqiXEH",
           "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "single_point_1_3_iOHJxBsQFRMOnJZ98cDsx$$DQeTcvhIK7JaByE9sAtXz" : {
+      "id" : "single_point_1_3_iOHJxBsQFRMOnJZ98cDsx$$DQeTcvhIK7JaByE9sAtXz",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "single_point_1_3"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM single_point_1_3\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -179,7 +208,17 @@
         } ],
         "outputs" : [ {
           "id" : "1_kh4EMlpXK7_1LXxO7A4$$8MrY5FdACBKR_17Wg1YUF",
-          "slug" : "out"
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ ]
+            }
+          }
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -240,45 +279,14 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
-    },
-    "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3" : {
-      "id" : "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3",
-      "component" : "TargetModel",
-      "metadata" : {
-        "label" : "single_point_1_3",
-        "phase" : 0
-      },
-      "properties" : {
-        "customQueryDisabled" : true,
-        "customQuery" : false,
-        "incrementalEditorDisabled" : true,
-        "query" : "\nSELECT *\n\nFROM single_point_1_3\n\n",
-        "isModel" : true,
-        "incrementalKey" : false,
-        "incremental" : {
-          "expression" : "true"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "input_port_2_1",
-          "slug" : "input_port_2_1"
-        } ],
-        "outputs" : [ {
-          "id" : "output_port_2_1",
-          "slug" : "output_port_2_1"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
     }
   },
   "connections" : [ {
-    "id" : "conn_JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal_prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3",
+    "id" : "conn_JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal_iOHJxBsQFRMOnJZ98cDsx$$DQeTcvhIK7JaByE9sAtXz_single_point_1_3_iOHJxBsQFRMOnJZ98cDsx$$DQeTcvhIK7JaByE9sAtXz",
     "source" : "JHYFsTyET_gZlQ2yB9THP$$orMhMfFbDSAT78rKWwNal",
     "sourcePort" : "iOHJxBsQFRMOnJZ98cDsx$$DQeTcvhIK7JaByE9sAtXz",
-    "target" : "prophecy_tmp__mbz0tvui__latlog_test2__single_point_1_3",
-    "targetPort" : "input_port_2_1"
+    "target" : "single_point_1_3_iOHJxBsQFRMOnJZ98cDsx$$DQeTcvhIK7JaByE9sAtXz",
+    "targetPort" : "input_port_2"
   }, {
     "id" : "he0_RwCL6_XqTwflxFWhS",
     "source" : "08epPZXK4GXtHVjyv96Sx$$4Z_6WcgX8k9tb-waZCXbH",
