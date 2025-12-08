@@ -1,17 +1,24 @@
 {{
   config({    
-    "materialized": "table",
-    "alias": "prophecy_tmp__mc001kf5__latlog__distance_comparison",
-    "database": "sony",
-    "schema": "orch_test"
+    "materialized": "ephemeral",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
   })
 }}
 
-WITH create_point AS (
+WITH points AS (
 
-  SELECT * 
+  SELECT *
   
-  FROM {{ source('prophecy_tmp_source__latlog', 'prophecy_tmp__mc001kf5__latlog__create_point') }}
+  FROM {{ ref('latlog__points')}}
+
+),
+
+create_point AS (
+
+  SELECT *
+  
+  FROM {{ ref('latlog__create_point')}}
 
 ),
 
@@ -20,14 +27,6 @@ distance AS (
   SELECT * 
   
   FROM create_point AS in0
-
-),
-
-points AS (
-
-  SELECT * 
-  
-  FROM {{ source('prophecy_tmp_source__latlog', 'prophecy_tmp__mc001kf5__latlog__points') }}
 
 ),
 

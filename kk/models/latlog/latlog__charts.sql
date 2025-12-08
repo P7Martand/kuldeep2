@@ -1,27 +1,25 @@
 {{
   config({    
-    "materialized": "table",
-    "alias": "prophecy_tmp__mc001kf5__latlog__points",
-    "database": "sony",
-    "schema": "orch_test"
+    "materialized": "ephemeral",
+    "database": "qa_team",
+    "schema": "qa_orchestration"
   })
 }}
 
 WITH create_point AS (
 
-  SELECT * 
+  SELECT *
   
-  FROM {{ source('prophecy_tmp_source__latlog', 'prophecy_tmp__mc001kf5__latlog__create_point') }}
+  FROM {{ ref('latlog__create_point')}}
 
 ),
 
-points AS (
+charts AS (
 
   SELECT 
     seq AS seq,
     from_city AS from_city,
     to_city AS to_city,
-    from_wkt AS from_wkt,
     Alteryx_Distance_KM AS Alteryx_Distance_KM,
     Formula_Distance_KM AS Formula_Distance_KM,
     Difference_Alteryx_KM_2 AS Difference_Alteryx_KM_2,
@@ -34,4 +32,4 @@ points AS (
 
 SELECT *
 
-FROM points
+FROM charts

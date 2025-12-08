@@ -1,10 +1,10 @@
 Schedule = Schedule(cron = "* 0 2 * * * *", timezone = "GMT", emails = ["email@gmail.com"], enabled = False)
 
 with DAG(Schedule = Schedule):
-    model_latlog_single_point = Task(
-        task_id = "model_latlog_single_point", 
+    latlog__single_point = Task(
+        task_id = "latlog__single_point", 
         component = "Model", 
-        modelName = "model_latlog_single_point"
+        modelName = "latlog__single_point"
     )
     raw_points = Task(
         task_id = "raw_points", 
@@ -12,21 +12,26 @@ with DAG(Schedule = Schedule):
         table = {"name" : "create_point_gem_seed", "sourceType" : "Seed"}, 
         writeOptions = {"writeMode" : "overwrite"}
     )
-    model_latlog_charts = Task(task_id = "model_latlog_charts", component = "Model", modelName = "model_latlog_charts")
-    model_latlog_create_point = Task(
-        task_id = "model_latlog_create_point", 
+    latlog__charts = Task(task_id = "latlog__charts", component = "Model", modelName = "latlog__charts")
+    latlog__create_point = Task(
+        task_id = "latlog__create_point", 
         component = "Model", 
-        modelName = "model_latlog_create_point"
+        modelName = "latlog__create_point"
     )
-    model_latlog_points = Task(task_id = "model_latlog_points", component = "Model", modelName = "model_latlog_points")
-    model_latlog_distance_comparison = Task(
-        task_id = "model_latlog_distance_comparison", 
+    latlog__points = Task(task_id = "latlog__points", component = "Model", modelName = "latlog__points")
+    latlog__distance_comparison = Task(
+        task_id = "latlog__distance_comparison", 
         component = "Model", 
-        modelName = "model_latlog_distance_comparison"
+        modelName = "latlog__distance_comparison"
     )
-    raw_points.out >> model_latlog_create_point.in_0
+    raw_points.out >> latlog__create_point.in_0
     (
-        model_latlog_create_point.out_0
-        >> [model_latlog_charts.in_0, model_latlog_distance_comparison.in_0, model_latlog_points.in_0]
+        latlog__create_point.out_0
+        >> [latlog__distance_comparison.in_1, latlog__points.in_0, latlog__distance_comparison.in_2,
+              latlog__distance_comparison.in_0, latlog__charts.in_0]
     )
-    model_latlog_points.out_0 >> [model_latlog_single_point.in_0, model_latlog_distance_comparison.in_0]
+    (
+        latlog__points.out_0
+        >> [latlog__single_point.in_0, latlog__distance_comparison.in_0, latlog__distance_comparison.in_1,
+              latlog__distance_comparison.in_2]
+    )
