@@ -32,41 +32,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "lzjmvTCL",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "route_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "from_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "to_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "distance_km",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "daily_frequency",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "avg_price_inr",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -91,70 +56,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "fQu0i6Ne",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "population_2023",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "GDP_billion_USD",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "tourist_arrivals_million",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "region",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "city_information"
         } ],
         "outputs" : [ {
           "id" : "SiLz9rIM",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "population_2023",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "GDP_billion_USD",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "tourist_arrivals_million",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "region",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -188,50 +93,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "R7s8CBu9",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "cc_city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_from_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_to_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "cc_city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "missing_route_data"
         } ],
         "outputs" : [ {
           "id" : "SgJXPfTj",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -256,36 +121,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "MnQblTV9",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "population_2023",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "GDP_billion_USD",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "tourist_arrivals_million",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "region",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -320,40 +155,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "BjupqGDb",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "h2_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "h1_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "different_city_pairs"
         } ],
         "outputs" : [ {
           "id" : "ctZFb3hk",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -393,88 +198,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "FPM7lR8C",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "population_2023",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "GDP_billion_USD",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "tourist_arrivals_million",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "region",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "h1"
         }, {
           "id" : "tB58z5uC",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "population_2023",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "GDP_billion_USD",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "tourist_arrivals_million",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "region",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "h2"
         } ],
         "outputs" : [ {
           "id" : "ncCG1Y9l",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "h2_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "h1_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -499,51 +229,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "YiAtO5L1",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_code",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "state",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "latitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "longitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "airport_type",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "is_hub",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -615,156 +300,16 @@
       "ports" : {
         "inputs" : [ {
           "id" : "FZvnvDmx",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "ccnir"
         }, {
           "id" : "LOJdt2mC",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_code",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "state",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "latitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "longitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "airport_type",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "is_hub",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "a1"
         }, {
           "id" : "j9UfnLFx",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_code",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "state",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "latitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "longitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "airport_type",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "is_hub",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "a2"
         } ],
         "outputs" : [ {
           "id" : "JA3znJXF",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city1_airport",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2_airport",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city1_wkt_point",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2_wkt_point",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -788,60 +333,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "NUDI0bkl",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "cc_city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_from_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_to_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "cc_city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "city_route_mappings"
         } ],
         "outputs" : [ {
           "id" : "fDH9g8TE",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "cc_city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_from_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_to_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "cc_city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -865,40 +360,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "iaEGW9g5",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "h2_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "h1_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "city_pairs"
         } ],
         "outputs" : [ {
           "id" : "Qgy8Jl4A",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "h2_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "h1_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -938,50 +403,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "BPMSjCEs",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city1_wkt_point",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "UNIQUE_ROUTES",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            } ]
-          },
           "slug" : "unique_city_routes"
         } ],
         "outputs" : [ {
           "id" : "KBafLVQk",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "ORIGIN_CITY",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORIGIN_CITY_WKT_POINT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "TOTAL_UNIQUE_ROUTES",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -1036,88 +461,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "o8oPPAMC",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "cc"
         }, {
           "id" : "LizWKBBl",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "route_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "from_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "to_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "distance_km",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "daily_frequency",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "avg_price_inr",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            } ]
-          },
           "slug" : "rd"
         } ],
         "outputs" : [ {
           "id" : "ezwpdWRl",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "cc_city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_from_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "rd_to_city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "cc_city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -1171,65 +521,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "wLwMtjUM",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city1_airport",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2_airport",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city1_wkt_point",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city2_wkt_point",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "enriched_city_combinations"
         } ],
         "outputs" : [ {
           "id" : "R8C8AEct",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city1",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "city1_wkt_point",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "UNIQUE_ROUTES",
-              "dataType" : {
-                "type" : "Bigint"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false

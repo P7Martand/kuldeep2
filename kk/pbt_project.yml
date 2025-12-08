@@ -62,19 +62,19 @@ sqlModels:
           type: String
       - name: Alteryx_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Formula_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM_2
         dataType:
-          type: Float
+          type: Decimal
       - name: h3_approx_distance
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM
         dataType:
-          type: Float
+          type: Decimal
     description: null
     author: sony@prophecy.io
     files:
@@ -111,6 +111,15 @@ sqlMacros:
     - macros/generate_schema_name.sql
     - .prophecy/ide/macros/generate_schema_name.json
     createdAt: '2025-03-21 07:40:26'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: prakharmartand@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2025-12-08 04:19:08'
 sqlSeeds:
   .prophecy/metadata/sqlseeds/raw_test2:
     name: raw_test2
@@ -129,31 +138,31 @@ sqlSeeds:
           type: String
       - name: from_lat
         dataType:
-          type: Float
+          type: Decimal
       - name: from_lon
         dataType:
-          type: Float
+          type: Decimal
       - name: to_lat
         dataType:
-          type: Float
+          type: Decimal
       - name: to_lon
         dataType:
-          type: Float
+          type: Decimal
       - name: Alteryx_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Formula_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM_2
         dataType:
-          type: Float
+          type: Decimal
       - name: h3_approx_distance
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM
         dataType:
-          type: Float
+          type: Decimal
     description: null
     author: sony@prophecy.io
     files:
@@ -182,19 +191,19 @@ sqlSeeds:
           type: String
       - name: Alteryx_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Formula_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM_2
         dataType:
-          type: Float
+          type: Decimal
       - name: h3_approx_distance
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM
         dataType:
-          type: Float
+          type: Decimal
     description: null
     author: sony@prophecy.io
     files:
@@ -218,7 +227,7 @@ sqlSeeds:
           type: Integer
       - name: tourist_arrivals_million
         dataType:
-          type: Float
+          type: Decimal
       - name: region
         dataType:
           type: String
@@ -244,31 +253,31 @@ sqlSeeds:
           type: String
       - name: from_lat
         dataType:
-          type: Float
+          type: Decimal
       - name: from_lon
         dataType:
-          type: Float
+          type: Decimal
       - name: to_lat
         dataType:
-          type: Float
+          type: Decimal
       - name: to_lon
         dataType:
-          type: Float
+          type: Decimal
       - name: Alteryx_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Formula_Distance_KM
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM_2
         dataType:
-          type: Float
+          type: Decimal
       - name: h3_approx_distance
         dataType:
-          type: Float
+          type: Decimal
       - name: Difference_Alteryx_KM
         dataType:
-          type: Float
+          type: Decimal
     description: null
     author: sony@prophecy.io
     files:
@@ -356,10 +365,10 @@ sqlSeeds:
           type: String
       - name: latitude
         dataType:
-          type: Float
+          type: Decimal
       - name: longitude
         dataType:
-          type: Float
+          type: Decimal
       - name: airport_type
         dataType:
           type: String
@@ -385,16 +394,16 @@ sqlSeeds:
           type: String
       - name: Open
         dataType:
-          type: Float
+          type: Decimal
       - name: Close
         dataType:
-          type: Float
+          type: Decimal
       - name: High
         dataType:
-          type: Float
+          type: Decimal
       - name: Low
         dataType:
-          type: Float
+          type: Decimal
     description: null
     author: sony@prophecy.io
     files:
@@ -417,22 +426,22 @@ sqlSeeds:
           type: String
       - name: from_lat
         dataType:
-          type: Float
+          type: Decimal
       - name: from_lon
         dataType:
-          type: Float
+          type: Decimal
       - name: to_lat
         dataType:
-          type: Float
+          type: Decimal
       - name: to_lon
         dataType:
-          type: Float
+          type: Decimal
       - name: distance_km
         dataType:
-          type: Float
+          type: Decimal
       - name: sales_amount
         dataType:
-          type: Float
+          type: Decimal
       - name: customer_count
         dataType:
           type: Integer
@@ -447,10 +456,10 @@ sqlSeeds:
           type: String
       - name: growth_rate
         dataType:
-          type: Float
+          type: Decimal
       - name: coordinates_valid
         dataType:
-          type: String
+          type: Boolean
       - name: special_chars
         dataType:
           type: String
@@ -462,10 +471,10 @@ sqlSeeds:
           type: Date
       - name: timestampNTZ
         dataType:
-          type: Date
+          type: String
       - name: time
         dataType:
-          type: String
+          type: Time
     description: null
     author: sony@prophecy.io
     files:
@@ -748,6 +757,7 @@ projectDependencies: {}
 flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}
+projectConfigurations: {}
 sqlOrchestratorPipelines:
   .prophecy/metadata/sqlorchestratorpipeline/latlog:
     name: latlog

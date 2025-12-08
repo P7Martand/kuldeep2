@@ -344,9 +344,18 @@
   "dependenciesContainer" : {
     "dependencies" : { },
     "prophecyProjectDependencies" : {
-      "http://gitserver:3000/3hPfgmqG_team_67/foYwSqoh_project_27575.git" : "27575"
+      "https://github.com/prophecy-io/prophecy-basics" : "64560"
+    },
+    "dependenciesMetadata" : {
+      "https://github.com/prophecy-io/prophecy-basics" : {
+        "autoUpgrade" : true
+      }
     }
   },
-  "entitiesToSync" : [ ],
+  "entitiesToSync" : [ {
+    "name" : "m4",
+    "type" : "Model",
+    "syncedOnce" : true
+  } ],
   "frontEndLanguage" : "sql"
 }

@@ -1,5 +1,5 @@
 ---
 packages:
-- revision: "sql_table_lib/2"
-  git: "http://gitserver:3000/3hPfgmqG_team_67/foYwSqoh_project_27575.git"
+- revision: "1.0.4"
+  git: "https://github.com/prophecy-io/prophecy-basics"
   subdirectory: ""

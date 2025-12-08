@@ -48,51 +48,6 @@
         } ],
         "outputs" : [ {
           "id" : "S7Hqd7Yb7hqzBAfnfaoTW",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "city",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_code",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "airport_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "state",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "latitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "longitude",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "airport_type",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "is_hub",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
